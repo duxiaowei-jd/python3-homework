@@ -9,8 +9,9 @@ def tailf(path):
     while True:
         with open(path) as f:
             f.seek(offset)
-            for i in f:
-                yield i
+            # for i in f:
+            #     yield i
+            yield from f #python3
             offset = f.tell()
         time.sleep(1)
 
